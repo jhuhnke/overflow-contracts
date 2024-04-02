@@ -1,0 +1,10 @@
+[package]
+name = "reppy contracts"
+
+[dependencies]
+Sui = { git = "https://github.com/MystenLabs/sui.git", subdir = "crates/sui-framework/packages/sui-framework", rev = "releases/sui-v1.17.0-release" } 
+
+[addresses]
+escrow = "0x0"
+std = "0x1"
+sui = "0x2"
