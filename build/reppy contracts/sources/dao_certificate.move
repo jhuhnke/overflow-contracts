@@ -3,8 +3,8 @@ module escrow::dao_certificate {
     use sui::tx_context::{Self, TxContext, sender};
     use sui::transfer;
     use sui::event; 
-    use sui::package; 
     use sui::display;
+    use sui::package;
     use sui::dynamic_object_field as ofield;
     use std::string;
 
@@ -97,7 +97,7 @@ module escrow::dao_certificate {
             owner: sender
         }); 
 
-        transfer::public_transfer(dao, sender)
+        transfer::transfer(dao, sender); 
     }
 
     // ===== Grant Role =====
@@ -126,8 +126,8 @@ module escrow::dao_certificate {
     }
 
     // ===== Change Role =====
-    entry fun change_role(parent: &mut DaoOwnerCert, child_name: vector<u8>, new_role: vector<u8>) {
-        mutate(ofield::borrow_mut<vector<u8>, RoleCert>(
+    entry fun change_role(parent: &mut DaoOwnerCert, child_name: address, new_role: vector<u8>) {
+        mutate(ofield::borrow_mut<address, RoleCert>(
             &mut parent.id, 
             child_name, 
         ), 
@@ -142,7 +142,7 @@ module escrow::dao_certificate {
 
     // ===== Burn DAO Ownership =====
     entry fun burn_dao(dao: DaoOwnerCert) {
-        let DaoOwnerCert{ id, name: _, description: _, webpage_url: _, image_url: _} = dao; 
+        let DaoOwnerCert { id, name: _, description: _, webpage_url: _, image_url: _} = dao; 
         object::delete(id); 
     }
 
@@ -166,6 +166,6 @@ module escrow::dao_certificate {
     // ===== Test Init ======
     #[test_only]
     public fun test_init(ctx: &mut TxContext) {
-        init(ctx)
+        init(DAO_CERTIFICATE {}, ctx)
     }
 }
