@@ -1,4 +1,4 @@
-module escrow::credit_score {
+module certificate::credit_score {
     use sui::object::{Self, ID, UID}; 
     use sui::tx_context::{Self, TxContext, sender}; 
     use sui::transfer; 

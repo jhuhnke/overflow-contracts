@@ -1,11 +1,11 @@
 #[test_only]
-module escrow::mint_credit_score_tests {
+module certificate::mint_credit_score_tests {
     use sui::test_scenario as ts; 
     use sui::transfer;
     use sui::sui::SUI; 
     use sui::coin::{Self};
-    use escrow::credit_score::{Certificate};
-    use escrow::credit_score::{
+    use certificate::credit_score::{Certificate};
+    use certificate::credit_score::{
         test_init, 
         mint,
         burn

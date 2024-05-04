@@ -1,11 +1,11 @@
 #[test_only]
 #[allow(unused_function)]
-module escrow::verifier_tests {
+module certificate::verifier_tests {
     // ===== Imports =====
     use sui::groth16::{Self, bn254}; 
     use std::vector; 
 
-    use escrow::verifier::{
+    use certificate::verifier::{
         do_verify, 
         do_just, 
         parse_pvk_from_vk

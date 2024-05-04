@@ -1,15 +1,15 @@
 #[test_only]
 #[allow(unused_use)]
-module escrow::mint_dao_certificate_tests {
+module certificate::mint_dao_certificate_tests {
     use sui::test_scenario as ts; 
     use sui::transfer;
     use sui::sui::SUI; 
     use sui::coin::{Self, Coin}; 
-    use escrow::dao_certificate::{
+    use certificate::dao_certificate::{
         DaoOwnerCert, 
         RoleCert
     }; 
-    use escrow::dao_certificate::{
+    use certificate::dao_certificate::{
         test_init, 
         create_dao, 
         grant_role, 

@@ -1,4 +1,4 @@
-module escrow::identity_certificate {
+module certificate::identity_certificate {
     use sui::object::{Self, ID, UID}; 
     use sui::tx_context::{Self, TxContext, sender};
     use sui::transfer;
