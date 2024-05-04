@@ -1,11 +1,11 @@
-module escrow::proof_policy {
+module certificate::proof_policy {
     use sui::transfer_policy::{
         Self as policy, 
         TransferPolicy, 
         TransferRequest
     }; 
 
-    use escrow::verifier; 
+    use certificate::verifier; 
 
     const ERuleNotFound: u64 = 0; 
     const EIsNotVerified: u64 = 1; 

@@ -1,9 +1,9 @@
-module escrow::helpers {
+module certificate::helpers {
     use sui::object::{Self, ID}; 
     use sui::transfer_policy::{Self, TransferPolicy, TransferRequest}; 
     use sui::event; 
 
-    use escrow::proof_policy; 
+    use certificate::proof_policy; 
 
     // ===== Structs =====
     

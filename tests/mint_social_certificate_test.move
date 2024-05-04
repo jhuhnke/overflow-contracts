@@ -1,10 +1,10 @@
 #[test_only]
-module escrow::mint_social_certificate_tests {
+module certificate::mint_social_certificate_tests {
     use sui::test_scenario as ts; 
     use sui::transfer;
     use sui::coin::{Self, Coin}; 
-    use escrow::social_certificate::{Certificate};
-    use escrow::social_certificate::{
+    use certificate::social_certificate::{Certificate};
+    use certificate::social_certificate::{
         test_init, 
         mint,
         burn, 

@@ -1,10 +1,10 @@
 #[test_only]
-module escrow::mint_cert_tests {
+module certificate::mint_identity_certificate_tests {
     use sui::test_scenario as ts; 
     use sui::transfer;
     use sui::coin::{Self, Coin}; 
-    use escrow::identity_certificate::{Certificate};
-    use escrow::identity_certificate::{
+    use certificate::identity_certificate::{Certificate};
+    use certificate::identity_certificate::{
         test_init, 
         mint,
         burn, 

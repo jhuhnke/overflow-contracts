@@ -1,4 +1,4 @@
-module escrow::verifier {
+module certificate::verifier {
     use sui::event;
     use sui::groth16::{Self, bn254};
     use std::vector;

@@ -1,4 +1,4 @@
-module escrow::utils {
+module certificate::utils {
     use std::vector::{Self}; 
 
     use sui::tx_context::{TxContext}; 
