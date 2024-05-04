@@ -129,6 +129,6 @@ module escrow::identity_certificate {
     // ===== Test Init =====
     #[test_only]
     public fun test_init(ctx: &mut TxContext) {
-        init(ctx)
+        init(IDENTITY_CERTIFICATE {}, ctx)
     }
 }

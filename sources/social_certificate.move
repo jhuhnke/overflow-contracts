@@ -136,6 +136,6 @@ module escrow::social_certificate {
     // ===== Test Init =====
     #[test_only]
     public fun test_init(ctx: &mut TxContext) {
-        init(ctx)
+        init(SOCIAL_CERTIFICATE {}, ctx)
     }
 }
